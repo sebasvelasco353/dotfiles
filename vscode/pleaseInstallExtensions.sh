@@ -14,6 +14,7 @@ code --install-extension pkief.material-icon-theme
 code --install-extension ritwickdey.liveserver
 code --install-extension sdras.vue-vscode-snippets
 code --install-extension sirtori.indenticator
+code --install-extension tomrijndorp.find-it-faster
 code --install-extension usernamehw.errorlens
 code --install-extension vscodevim.vim
 code --install-extension vue.volar
