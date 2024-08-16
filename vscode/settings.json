@@ -29,7 +29,6 @@
   "files.autoSaveDelay": 2500,
   "files.defaultLanguage": "",
   "files.trimTrailingWhitespace": true,
-  "workbench.iconTheme": "material-icon-theme",
   "testing.followRunningTest": false,
   "testing.openTesting": "neverOpen",
   "terminal.integrated.localEchoStyle": "dim",
@@ -42,6 +41,7 @@
   "window.zoomLevel": -1,
   "prettier.enable": false,
   "editor.lineNumbers": "relative",
-  "workbench.colorTheme": "GitHub Dark"
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme"
   // "workbench.activityBar.visible": false
 }
