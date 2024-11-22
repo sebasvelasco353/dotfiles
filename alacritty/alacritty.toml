@@ -1,3 +1,4 @@
+[general]
 import = [
   "~/Documents/dotfiles/alacritty/catppuccin-macchiato.toml",
 ]

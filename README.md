@@ -6,6 +6,7 @@ my dotfiles used to configure the basics of my dev Env
 - Install ohmyzsh from [their GH repo](https://github.com/ohmyzsh/ohmyzsh) or with their CURL method.
 - to install the brew packages described in the brewfile use ```brew bundle``` while on the project repo and with Brew installed
 - Create symlinks of the different config folders here to the actual config folder with ```ln -s thisFolder targetFolder```
+- Install Tmux Plugin Manager from [their GH repo](https://github.com/tmux-plugins/tpm)
 - Open Tmux and install plugins (prefix + I)
 
 ## Notes
