@@ -10,7 +10,7 @@ TERM = "xterm-256color"
 size = 22
 
 [font.normal]
-# family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 
 [window]
 decorations = "buttonless"

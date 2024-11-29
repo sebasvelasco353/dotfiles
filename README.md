@@ -5,10 +5,12 @@ my dotfiles used to configure the basics of my dev Env
 - Run Git in the terminal to install Xcode stuff
 - Clone this repo in the folder you choose to, i usually do it in the documents folder
 - Oh my ZSH - https://github.com/ohmyzsh/ohmyzsh
+- JetbrainsMono Nerd Font - https://www.nerdfonts.com/font-downloads
 - Homebrew - https://brew.sh
 - VSCode - https://code.visualstudio.com
 - TPM (Tux plugin manager) - https://github.com/tmux-plugins/tpm
-- Create symlinks of the different config folders here to the actual config folder with ```ln -s thisFolder targetFolder```
+- Create .config folder with ```mkdir ~/.config/```
+- Create symlinks of the different config folders here to the actual config folder with ```ln -s thisFolder ~/.config/targetFolder```
 - Open Tmux and install plugins (prefix + I)
 - Docker - https://www.docker.com
 - postman - https://www.postman.com/

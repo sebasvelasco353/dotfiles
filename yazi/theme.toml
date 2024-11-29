@@ -139,12 +139,5 @@ rules = [
     { name = "*/", fg = "#83a598" }
 ]
 
-[icon]
-globs = []
-dirs  = []
-files = []
-exts  = []
-conds = []
-
 # : }}}
 
