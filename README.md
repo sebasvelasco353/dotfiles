@@ -18,8 +18,8 @@ my dotfiles used to configure the basics of my dev Env
 - to install the brew packages described in the brewfile use ```brew bundle``` while on the project repo and with Brew installed
 - Using pip install global dependencies ```sudo pip install django``` and ```sudo pip install virtualenv```
 
-## Notes
-- Eventually some Neovim configuration will be created using [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) and [TJ's video](https://www.youtube.com/watch?v=m8C0Cq9Uv9o&t=684s) and many other resources in the internet.
+## WIP
+- Neovim configuration based in [LazyVim](https://www.lazyvim.org/)
 
 ## ToDo
 - Write script that will handle running whatever is needed to configure a new or recently formatted Mac.
