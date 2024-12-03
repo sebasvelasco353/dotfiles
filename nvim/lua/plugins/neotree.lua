@@ -16,6 +16,8 @@ return {
         position = "right",
         mappings = {
           ["\\"] = "close_window",
+          ["v"] = "open_vsplit",
+          ["h"] = "open_split",
         },
       },
     },
