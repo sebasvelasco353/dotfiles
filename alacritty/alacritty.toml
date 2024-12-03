@@ -1,6 +1,6 @@
 [general]
 import = [
-  "~/Documents/dotfiles/alacritty/GruvboxMaterialTheme.toml",
+  "~/Documents/dotfiles/alacritty/catppuccin-frappe.toml",
 ]
 
 [env]
