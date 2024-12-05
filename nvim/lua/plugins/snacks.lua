@@ -8,6 +8,11 @@ return {
           header = [[ Welcome back friend ]],
         },
       },
+      toggle = {
+        -- your toggle configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      },
     },
   },
 }

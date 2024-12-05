@@ -4,7 +4,6 @@ return {
   lazy = false,
   ft = "markdown",
   dependencies = {
-    -- Required.
     "nvim-lua/plenary.nvim",
   },
   opts = {
@@ -19,20 +18,14 @@ return {
       folder = "/templates",
       date_format = "%Y-%m-%d",
       time_format = "%H:%M",
-      -- A map for custom variables, the key should be the variable and the value a function
       substitutions = {},
     },
 
     daily_notes = {
-      -- Optional, if you keep daily notes in a separate directory.
       folder = "/dailies",
-      -- Optional, if you want to change the date format for the ID of daily notes.
       date_format = "%Y-%m-%d",
-      -- Optional, if you want to change the date format of the default alias of daily notes.
       alias_format = "%B %-d, %Y",
-      -- Optional, default tags to add to each new daily note created.
       default_tags = { "daily", "todo" },
-      -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
       template = "/daily.md",
     },
 
@@ -40,8 +33,7 @@ return {
     ---@param title string|?
     ---@return string
     note_id_func = function(title)
-      -- This creates a note with the following ID:
-      -- fullYearMonthDay:HourMinuteSecond-title
+      -- This creates a note with the ID: fullYearMonthDay:HourMinuteSecond-title
       local suffix = ""
       if title ~= nil then
         -- If title is given, transform it into valid file name.
@@ -56,11 +48,8 @@ return {
     end,
   },
 
-  -- Define your own callbacks to further customize behavior.
-  callbacks = {
-    -- Runs right before writing the buffer for a note.
-    ---@param client obsidian.Client
-    ---@param note obsidian.Note
-    pre_write_note = function(client, note) end,
+  attachments = {
+    -- The folder to place images in via `:ObsidianPasteImg`.
+    img_folder = "/assets",
   },
 }
