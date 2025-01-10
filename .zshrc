@@ -14,7 +14,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export EDITOR='nvim'
+export EDITOR='code'
 
 # Export NVM
 export NVM_DIR="$HOME/.nvm"
