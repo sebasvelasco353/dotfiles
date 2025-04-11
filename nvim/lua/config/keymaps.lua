@@ -1,9 +1,3 @@
--- QoL Keymaps
-vim.keymap.set("n", "Y", "y$", { desc = "Yank to the end of the line" })
-
--- Obsidian Keymaps
-vim.keymap.set("n", "<leader>o", "", { desc = "Obsidian" })
-vim.keymap.set("n", "<leader>oo", ":ObsidianQuickSwitch<CR>", { desc = "Open Obsidian Note" })
-vim.keymap.set("n", "<leader>on", ":ObsidianNew<CR>", { desc = "Create new Obsidian Note" })
-vim.keymap.set("n", "<leader>ot", ":ObsidianToday<CR>", { desc = "Create new Obsidian Today Note" })
-vim.keymap.set("n", "<leader>oT", ":ObsidianTomorrow<CR>", { desc = "Create new Obsidian Tomorrow Note" })
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
