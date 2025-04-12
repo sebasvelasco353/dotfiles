@@ -26,8 +26,9 @@ GOPATH=$HOME/go  PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 
 # Add aliases for the NVIM configurations
-# Function for selecting the NVIM config using nvims as the command
+alias kvim='NVIM_APPNAME=kickstart nvim'
 
+# Function for selecting the NVIM config using nvims as the command
 # Got this from a YT video made by: Elijah Manor
 # https://youtu.be/LkHjJlSgKZY?si=QaVaodOXfuHloo8i
 
