@@ -1,13 +1,13 @@
 [general]
 import = [
-  "~/Documents/dotfiles/alacritty/catppuccin-frappe.toml",
+  "~/Documents/dotfiles/alacritty/theme.toml",
 ]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 16
+size = 20
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
