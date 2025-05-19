@@ -1,10 +1,10 @@
 return {
-  { "rebelot/kanagawa.nvim" },
+  { "olimorris/onedarkpro.nvim" },
 
   {
-    "LazyVim/LazyVim",
+    "olimorris/onedarkpro.nvim",
     opts = {
-      colorscheme = "kanagawa",
+      colorscheme = "onedarkpro",
     },
   },
 }
