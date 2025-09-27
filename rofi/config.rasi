@@ -1,0 +1,101 @@
+@theme "/dev/null"
+
+* {
+  bg: #3c3836;
+	background-color: @bg;
+}
+
+
+configuration {
+	show-icons: true;
+	icon-theme: "Papirus";
+	location: 0;
+	font: "CaskaydiaCove Nerd Font 12";	
+	display-drun: "";
+  
+  /* for custom ones do Test:~/path/to/file */
+  modi: "drun,window,ssh";
+  display-drun: " ";
+  display-window: "  ";
+  display-ssh: "󱘖 ";
+
+  kb-mode-complete: "";
+  kb-element-next: "";
+  kb-element-prev: "";
+  kb-row-up: "Up,Control+k,";
+  kb-row-down: "Down,Control+j";
+  kb-accept-entry: "Control+m,Return,KP_Enter";
+  terminal: "kitty";
+  kb-remove-to-eol: "Control+Shift+e";
+  kb-mode-next: "Tab,Shift+Right,Control+l";
+  kb-mode-previous: "ISO_Left_Tab,Shift+Left,Control+h";
+  kb-remove-char-back: "BackSpace";
+}
+
+window { 
+	width: 35%;
+	transparency: "real";
+	orientation: vertical;
+  border-color: #a89984;
+  border-radius: 15px;
+}
+
+mainbox {
+	children: [inputbar, listview];
+}
+
+// ELEMENT
+// -----------------------------------
+
+element {
+	padding: 4 12;
+	text-color: #EFE7DD;
+  border-radius: 10px;
+}
+
+element selected {
+	background-color: #a89984;
+}
+
+element-text {
+	background-color: inherit;
+	text-color: inherit;
+}
+
+element-icon {
+	size: 16 px;
+	background-color: inherit;
+	padding: 0 6 0 0;
+	alignment: vertical;
+}
+
+listview {
+	columns: 1;
+	lines: 9;
+	padding: 8 0;
+	fixed-height: true;
+	fixed-columns: true;
+	fixed-lines: true;
+}
+
+// INPUT BAR 
+//------------------------------------------------
+
+entry {
+	text-color: #EFE7DD;
+	padding: 10 10 0 0;
+	margin: 0 -2 0 0;
+}
+
+inputbar {
+	background-image: url("~/.config/rofi/girl-3.png", width);
+	padding: 180 0 0;
+	margin: 0 0 0 0;
+} 
+
+prompt {
+	text-color: #aaffaa;
+	padding: 11 10 0 10;
+	margin: 0 -2 0 0;
+}
+

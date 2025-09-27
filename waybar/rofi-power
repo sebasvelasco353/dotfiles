@@ -1,0 +1,9 @@
+#!/bin/bash
+chosen=$(echo -e " Lock\n Logout\n Reboot\n Shutdown" | rofi -dmenu -p "Power")
+case "$chosen" in
+    " Lock") hyprlock ;;   # Or swaylock / your lock tool
+    " Logout") hyprctl dispatch exit ;;
+    " Reboot") systemctl reboot ;;
+    " Shutdown") systemctl poweroff ;;
+esac
+

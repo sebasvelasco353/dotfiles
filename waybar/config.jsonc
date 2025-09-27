@@ -1,0 +1,73 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "margin": "5 5 0 5",
+  "modules-left": [
+    "custom/power",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "mpris"
+  ],
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "bluetooth",
+    "tray",
+    "clock",
+    "notifications"
+  ],
+  // Custom power button
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "~/.local/bin/rofi-power"
+  },
+  // Workspaces
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "all-outputs": true,
+    "on-click": "activate"
+  },
+  // Media (MPRIS)
+  "mpris": {
+    "format": "{title} ",
+    "max-length": 30,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+  // Network
+  "network": {
+    "format-wifi": "  connected",
+    "format-ethernet": " connected",
+    "format-disconnected": " disconnected",
+    "tooltip": false
+  },
+  // Volume
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  // Bluetooth
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}"
+  },
+  // Clock
+  "clock": {
+    "format": "{:%a %d %b   %H:%M}",
+    "tooltip-format": "{:%A, %d %B %Y %H:%M:%S}"
+  },
+  // Notifications
+  "notifications": {
+    "format": " {count}",
+    "tooltip": false
+  }
+}
