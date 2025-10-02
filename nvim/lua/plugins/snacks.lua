@@ -7,10 +7,17 @@ return {
       -- your explorer configuration comes here
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
+      files = {
+        hidden = true,
+      },
     },
     picker = {
       sources = {
         explorer = {
+          -- Show hidden Files
+          files = {
+            hidden = true,
+          },
           -- Move explorer to a floating window with preview
           auto_close = true,
           layout = {
