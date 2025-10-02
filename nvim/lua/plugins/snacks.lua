@@ -12,6 +12,7 @@ return {
       sources = {
         explorer = {
           -- Move explorer to a floating window with preview
+          auto_close = true,
           layout = {
             { preview = true },
             layout = {
