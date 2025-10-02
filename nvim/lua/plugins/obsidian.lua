@@ -7,6 +7,11 @@ return {
     "nvim-lua/plenary.nvim",
   },
   opts = {
+    templates = {
+      folder = "~/Documents/Notes/templates",
+      date_format = "%d-%m-%Y-%a",
+      time_format = "%H:%M",
+    },
     workspaces = {
       {
         name = "personal",
