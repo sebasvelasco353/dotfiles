@@ -1,0 +1,11 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "alt+cmd+\\",
+    "command": "workbench.action.createTerminalEditor"
+  },
+  {
+    "key": "cmd+alt+f",
+    "command": "multiCommand.fzfInTerminal"
+  }
+]

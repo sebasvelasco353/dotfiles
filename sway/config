@@ -1,4 +1,0 @@
-# Ruta a la imagen de fondo
-set $wallpaper ~/.config/sway/bn.png
-# Ejecutar swaybg para poner el fondo en todas las salidas
-exec swaybg -i $wallpaper -m fill

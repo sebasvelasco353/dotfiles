@@ -4,11 +4,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load
 ZSH_THEME="robbyrussell"
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# Load plugins
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
@@ -24,24 +20,9 @@ export NVM_DIR="$HOME/.nvm"
 # Exports for Go-Blueprint
 GOPATH=$HOME/go  PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
-
-# Add aliases for the NVIM configurations
-alias kvim='NVIM_APPNAME=kickstart nvim'
-
-# Function for selecting the NVIM config using nvims as the command
-# Got this from a YT video made by: Elijah Manor
-# https://youtu.be/LkHjJlSgKZY?si=QaVaodOXfuHloo8i
-
-function nvims() {
-  items=("nvim" "kickstart")
-  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config " --height=~50% --layout=reverse --border --exit-0)
-  if [[ -z $config ]]; then
-    echo "Nothing selected"
-    return 0
-  elif [[ $config == "default" ]]; then
-    config=""
-  fi
-  NVIM_APPNAME=$config nvim $@
+# Functions
+fzopen() {
+fzf --style full \
+    --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}' \
+    --bind 'enter:execute($EDITOR {} > /dev/tty < /dev/tty)+abort'
 }
-
-bindkey -s ^n "nvims\n"
