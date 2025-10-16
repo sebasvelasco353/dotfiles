@@ -43,7 +43,7 @@
     "scss"
   ],
   "editor.lineNumbers": "relative",
-  "workbench.colorTheme": "Nord",
+  "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.iconTheme": "material-icon-theme",
   "testing.automaticallyOpenTestResults": "neverOpen",
   "workbench.productIconTheme": "material-product-icons",

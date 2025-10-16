@@ -1,5 +1,4 @@
 aaron-bond.better-comments
-arcticicestudio.nord-visual-studio-code
 dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
 esbenp.prettier-vscode
@@ -16,6 +15,7 @@ pkief.material-icon-theme
 pkief.material-product-icons
 ritwickdey.liveserver
 ryuta46.multi-command
+sainnhe.gruvbox-material
 samplavigne.p5-vscode
 sdras.vue-vscode-snippets
 sirtori.indenticator
