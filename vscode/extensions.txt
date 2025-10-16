@@ -1,4 +1,5 @@
 aaron-bond.better-comments
+arcticicestudio.nord-visual-studio-code
 dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
 esbenp.prettier-vscode
@@ -11,12 +12,6 @@ gruntfuggly.todo-tree
 kamikillerto.vscode-colorize
 ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
-ms-python.autopep8
-ms-python.debugpy
-ms-python.python
-ms-python.vscode-pylance
-ms-python.vscode-python-envs
-nichabosh.minimalist-dark
 pkief.material-icon-theme
 pkief.material-product-icons
 ritwickdey.liveserver

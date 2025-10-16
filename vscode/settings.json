@@ -43,7 +43,7 @@
     "scss"
   ],
   "editor.lineNumbers": "relative",
-  "workbench.colorTheme": "Minimal",
+  "workbench.colorTheme": "Nord",
   "workbench.iconTheme": "material-icon-theme",
   "testing.automaticallyOpenTestResults": "neverOpen",
   "workbench.productIconTheme": "material-product-icons",
@@ -83,5 +83,6 @@
         }
       ]
     }
-  ]
+  ],
+  "editor.formatOnType": true
 }
