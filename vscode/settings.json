@@ -43,8 +43,6 @@
     "scss"
   ],
   "editor.lineNumbers": "relative",
-  "workbench.colorTheme": "Gruvbox Material Dark",
-  "workbench.iconTheme": "material-icon-theme",
   "testing.automaticallyOpenTestResults": "neverOpen",
   "workbench.productIconTheme": "material-product-icons",
   // Vim Config
@@ -84,5 +82,9 @@
       ]
     }
   ],
-  "editor.formatOnType": true
+  "editor.formatOnType": true,
+  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Gruvbox Dark Medium"
 }
