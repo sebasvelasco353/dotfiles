@@ -22,7 +22,7 @@
   "editor.scrollbar.vertical": "auto",
   "editor.overviewRulerBorder": false,
   "editor.hideCursorInOverviewRuler": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.guides.indentation": false,
   "indenticator.width": 0.2,
   "indenticator.color.dark": "rgba(255,255,255,0.2)",
@@ -86,5 +86,5 @@
   "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
   "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Gruvbox Dark Medium"
+  "workbench.colorTheme": "Nord"
 }
