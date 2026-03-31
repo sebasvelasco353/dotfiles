@@ -2,8 +2,8 @@
 my dotfiles used to configure the basics of my dev Env
 
 ## Usage
-- Run Git in the terminal to install Xcode stuff
-- Clone this repo in the folder you choose to, i usually do it in the documents folder
+- Run Git in the terminal and install Xcode stuff
+- Clone this repo in the folder you choose to
 - Oh my ZSH - https://github.com/ohmyzsh/ohmyzsh
 - JetbrainsMono Nerd Font - https://www.nerdfonts.com/font-downloads
 - Homebrew - https://brew.sh
@@ -16,7 +16,6 @@ my dotfiles used to configure the basics of my dev Env
 - postman - https://www.postman.com/
 
 - to install the brew packages described in the brewfile use ```brew bundle``` while on the project repo and with Brew installed
-- Using pip install global dependencies ```sudo pip install django``` and ```sudo pip install virtualenv```
 
 ## WIP
 - Neovim configuration based in [LazyVim](https://www.lazyvim.org/)

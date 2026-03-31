@@ -26,3 +26,4 @@ fzf --style full \
     --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}' \
     --bind 'enter:execute($EDITOR {} > /dev/tty < /dev/tty)+abort'
 }
+export PATH="$HOME/.local/bin:$PATH"
