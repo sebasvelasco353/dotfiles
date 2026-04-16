@@ -11,6 +11,6 @@ title = VelasCode
 theme = Catppuccin Mocha
 # window styles
 macos-window-buttons = hidden
-background-opacity = 0.8
+background-opacity = 1
 background-blur = 20 
 
