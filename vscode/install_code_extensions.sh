@@ -1,1 +1,0 @@
-while read line; do code --install-extension "$line"; done < "$HOME"/Documents/dotfiles/vscode/extensions.txt
