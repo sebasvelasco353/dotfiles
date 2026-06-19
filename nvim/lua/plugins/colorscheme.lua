@@ -1,18 +1,18 @@
 return {
   -- Install the theme
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "AlexvZyl/nordic.nvim",
+    lazy = false,
     priority = 1000,
-    opts = {
-      transparent_background = true,
-    },
+    config = function()
+      require("nordic").load()
+    end,
   },
   -- Configure LazyVim to load theme
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "nordic",
     },
   },
 }

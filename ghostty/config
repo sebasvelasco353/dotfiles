@@ -1,4 +1,4 @@
-font-size = 14
+font-size = 16
 # Disable Ligatures
 font-feature = -calt
 font-feature = -liga
@@ -7,10 +7,11 @@ font-feature = -dlig
 font-family = JetBrainsMono Nerd Font
 font-family-bold = JetBrainsMono Nerd Font
 # theme
-title = VelasCode
-theme = Catppuccin Mocha
+theme = Nord
 # window styles
+window-padding-x = 2
+window-padding-y = 2
 macos-window-buttons = hidden
+window-decoration = none
 background-opacity = 1
-background-blur = 20 
 
