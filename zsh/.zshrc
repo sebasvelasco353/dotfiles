@@ -101,11 +101,13 @@ source $ZSH/oh-my-zsh.sh
 #
 # Aliases
 alias opc="/opt/homebrew/bin/opencode"
+# open in vscode using fzf
+alias nf='code $(fzf --preview "bat --style=numbers --color=always {}")'
 
 # Exports
-export EDITOR=nvim
+# export EDITOR=nvim
+export EDITOR=code
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# open in vscode using fzf
-alias nf='nvim $(fzf --preview "bat --style=numbers --color=always {}")'
+
