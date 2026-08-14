@@ -102,10 +102,23 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias opc="/opt/homebrew/bin/opencode"
 # open in vscode using fzf
-alias nf='code $(fzf --preview "bat --style=numbers --color=always {}")'
+alias sf='code $(fzf --preview "bat --style=numbers --color=always {}")'
+# search file contents with ripgrep + fzf (live, literal, recursive, case-insensitive), preview match, open in vscode
+sif() {
+  local rg_prefix="rg --line-number --no-heading --ignore-case --color=always"
+  local result
+  result=$(
+    FZF_DEFAULT_COMMAND="$rg_prefix -- '$*'" \
+    fzf --ansi --disabled --query "$*" \
+        --delimiter : \
+        --bind "change:reload:$rg_prefix -- {q} || true" \
+        --preview "bat --style=numbers --color=always --highlight-line {2} {1}" \
+        --preview-window "+{2}-/2"
+  )
+  [ -n "$result" ] && code "$(echo "$result" | cut -d: -f1)"
+}
 
 # Exports
-# export EDITOR=nvim
 export EDITOR=code
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
