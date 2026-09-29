@@ -172,9 +172,19 @@ a time, one question at a time.
 - **Domain**: Web Frontend, Web Backend, Infrastructure
 - **Stack**: React, Golang with Gin, Postgres, Docker, Docker Compose
 - **Goal**: Self hosted Web application for managing home finances
-- **Current focus**: backend — building out accounts CRUD (create/update/delete) endpoints
-- **Conventions**: each resource is a package under `server/internal/<resource>/` with three files — `.controller.go` (gin handlers, inline `context.JSON` responses, no service layer), `.model.go` (struct + methods doing raw SQL via `config.DB`, no ORM), `.routes.go` (`RegisterRoutes(server *gin.Engine)`, protected routes grouped under `middleware.AuthValidator()`). No centralized error handling currently. Auth middleware sets `userId`/`email` into the gin context via `ctx.Set`.
+- **Current focus**: backend — transactions endpoints. Accounts CRUD (create/read one/read all/update/delete) is done; a dedicated balance-change endpoint for accounts was deliberately deferred (balance is not editable via update). Next: an exported `adjustBalance` in accounts (delta-based `SET balance = balance + $n`, not set-total) that runs inside the same `*sql.Tx` as the transaction insert — signature still to be designed. Migrations are edited in place while only a local test DB exists.
+- **Conventions**: each resource is a package under `server/internal/<resource>/` with `.controller.go` (gin handlers, no service layer), `.model.go` (structs + raw SQL via `config.DB`, no ORM), `.routes.go` (`RegisterRoutes(server *gin.Engine)`, protected routes grouped under `middleware.AuthValidator()`), plus a per-package `<resource>.errors.go` with a `handleErrors(context, err)` helper (log once via slog, then 404 for `errors.Is(err, sql.ErrNoRows)`, `errors.As` on `*pq.Error` for SQLSTATE cases, generic 500 fallback; no DB details leaked to the client). Success responses use `{"success": true, "data": ...}`. Auth middleware sets `userId`/`email` into the gin context; owner is always taken from there, never from the request body. Ownership is enforced in the SQL `WHERE ... AND owner = $n` (one query, no pre-`SELECT`); not-found and not-yours both return 404. Request bodies bind into dedicated structs that don't contain server-controlled fields (id/owner). Use explicit column lists, not `SELECT *`. **Naming**: controllers are unexported `handle*` functions (`handleGetAll`, `handleCreate`, …); model functions use data-access verbs without repeating the resource (package name already says it — no stutter), and `ByOwner` in the name signals ownership filtering (`GetOneByOwner`, `GetAllByOwner`, `insert`, `deleteOne`, `updateAccountDetails`); never name a function after a Go builtin (e.g. `delete`). Export only what another package actually calls. **Money**: integer minor units, `BIGINT` in Postgres / `int64` in Go, never floats; transactions store a positive `amount` (`CHECK (amount > 0)`) plus an `in`/`out` enum for direction. **Foreign keys**: no `ON DELETE CASCADE` on financial data; index FK columns that are queried.
 - **Notes**: the idea is to learn about infrastructure and backend development, and improve my front end skills
+- **Status**: active
+
+#### [ grid-prototype ]
+
+- **Domain**: Game Dev
+- **Stack**: Godot (GDScript), project created via Godot's editor UI
+- **Goal**: standalone learning project to get comfortable with Godot's node/scene/input model before starting a bigger tower-defense game that will reuse this and other mechanics
+- **Current focus**: 8×7 grid of gray cells the user can click to lighten (select) with the mouse; grid rendered from a single `Node2D` using custom drawing + math-based click detection rather than one node per cell
+- **Conventions**: none established yet — first Godot project, first game dev project overall
+- **Notes**: first time using Godot or any game engine; open to revisiting stack choice later but committed to Godot for now
 - **Status**: active
 
 ---
