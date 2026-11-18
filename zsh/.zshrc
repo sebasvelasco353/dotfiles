@@ -100,9 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Aliases
-alias opc="/opt/homebrew/bin/opencode"
-# open in vscode using fzf
-alias sf='code $(fzf --preview "bat --style=numbers --color=always {}")'
+alias sf='nvim $(fzf --preview "bat --style=numbers --color=always {}")'
 # search file contents with ripgrep + fzf (live, literal, recursive, case-insensitive), preview match, open in vscode
 sif() {
   local rg_prefix="rg --line-number --no-heading --ignore-case --color=always"
@@ -115,12 +113,13 @@ sif() {
         --preview "bat --style=numbers --color=always --highlight-line {2} {1}" \
         --preview-window "+{2}-/2"
   )
-  [ -n "$result" ] && code "$(echo "$result" | cut -d: -f1)"
+  [ -n "$result" ] && nvim "$(echo "$result" | cut -d: -f1)"
 }
 
 # Exports
-export EDITOR=code
+export EDITOR=nvim
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export PATH="/Users/sebas/.local/bin:$PATH"

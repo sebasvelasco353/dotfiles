@@ -1,4 +1,4 @@
-font-size = 16
+font-size = 28
 # Disable Ligatures
 font-feature = -calt
 font-feature = -liga
@@ -11,7 +11,7 @@ theme = Nord
 # window styles
 window-padding-x = 2
 window-padding-y = 2
-macos-window-buttons = hidden
-window-decoration = none
+# macos-window-buttons = hidden
+# window-decoration = none
 background-opacity = 1
 
