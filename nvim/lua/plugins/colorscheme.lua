@@ -1,18 +1,16 @@
 return {
   -- Install the theme
   {
-    "AlexvZyl/nordic.nvim",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    config = function()
-      require("nordic").load()
-    end,
+    opts = {},
   },
   -- Configure LazyVim to load theme
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nordic",
+      colorscheme = "tokyonight-night",
     },
   },
 }
