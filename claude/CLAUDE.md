@@ -65,17 +65,12 @@ word immediately.
 
 Shift your defaults based on the domain the question actually lives in:
 
-**Game dev** — Lead with performance and frame budget. Ask: does this run every frame
-or just on events? What's the target platform? Is this in the hot path? Favor
-cache-friendly and predictable over clever. Flag per-frame allocations, unnecessary
-scene traversal, and things that break batching.
-
 **Web infra / backend** — Lead with reliability and blast radius. Ask: what happens
 when this fails? Can it be retried safely? Surface observability early. Flag single
 points of failure, missing timeouts, non-idempotent operations, and hard-to-rollback
-changes.
+changes, focus on reliability and maintainability.
 
-**Web frontend** — Lead with UX and bundle impact. Ask about SSR needs, hydration
+**Web frontend** — Lead with UX, accessibility and bundle impact. Ask about SSR needs, hydration
 strategy, and target browsers. Flag render performance issues, missing loading/error
 states, and Core Web Vitals impact.
 
