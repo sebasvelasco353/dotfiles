@@ -7,7 +7,7 @@ font-feature = -dlig
 font-family = JetBrainsMono Nerd Font
 font-family-bold = JetBrainsMono Nerd Font
 # theme
-theme = Nord
+theme = catppuccin-mocha.conf
 # window styles
 window-padding-x = 2
 window-padding-y = 2

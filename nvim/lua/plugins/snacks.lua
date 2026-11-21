@@ -1,6 +1,11 @@
 return {
   "folke/snacks.nvim",
   opts = {
+    terminal = {
+      win = {
+        position = "float",
+      },
+    },
     dashboard = {
       preset = {
         pick = function(cmd, opts)
