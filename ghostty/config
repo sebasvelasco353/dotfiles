@@ -1,11 +1,11 @@
-font-size = 18
+font-size = 20
 # Disable Ligatures
 font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
 # Change font
 font-family = JetBrainsMono Nerd Font
-font-family-bold = JetBrainsMono Nerd Font
+font-family-bold = JetBrainsMono Nerd Font Bold
 # theme
 theme = catppuccin-mocha.conf
 # window styles
