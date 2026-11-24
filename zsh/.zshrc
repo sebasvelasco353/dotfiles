@@ -35,8 +35,13 @@ add-zsh-hook precmd vcs_info
 # prompt
 PROMPT="${blue}%3~${reset}"'${vcs_info_msg_0_}'$'\n'"%(?.${green}.${red})❯${reset} "
 
+# autocompletion
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # Aliases
 alias sf='nvim $(fzf --preview "bat --style=numbers --color=always {}")' # Search for a file and open in nvim
+alias ls='ls -l -G'
 
 # functions
 sif() { # search file contents with ripgrep + fzf (live, literal, recursive, case-insensitive), preview match, open in nvim
